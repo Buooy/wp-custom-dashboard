@@ -3,21 +3,17 @@ wp-custom-dashboard
 
 WP Custom Dashboard is a plugin boilerplate for creating a custom dashboard page in WordPress
 
-===================
 
 ## Features
 1. Custom dashboard page appears when you first enter wp-admin or dashboard->home page
 2. Dashboard home page has no menu subpage tab
 3. Easily customizable HTML, JS and CSS of the dashboard
 
-===================
 
 ## How It Works
 
 WP Custom Dashboard works by redirecting the user to a specifc page, in particular: /wp-admin/index.php?page={slug-name}, when they try to visit wp-admin/index.php.
 
-
-===================
 
 ## Installation
 
@@ -27,7 +23,6 @@ WP Custom Dashboard works by redirecting the user to a specifc page, in particul
 4. Locate the menu item that reads `WP Custom Dashboard`
 5. Click on `Activate`
 
-===================
 
 ## Customizing Plugin
 
@@ -38,7 +33,6 @@ At the moment, this plugin is a boilerplate. To edit the boilerplate, you need t
 3. `dashboard/css/style.css` :  CSS that will be loaded ONLY on the custom dashboard page
 4. `dashboard/img`           :  Images that can be loaded into the dashboard page. You can prepend 'IMAGE_URL' to get the URL of the image file directory
 
-===================
 
 ## License
 (The MIT License)
