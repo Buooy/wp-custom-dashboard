@@ -8,21 +8,15 @@ Author: Aaron Lee
 Author URI: http://buooy.com
 */
 
-
-
-/*******************************************************
- *					Constants					*
- *******************************************************/
-if( !defined('PLUGIN_URL') ){
-	define( 'PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-}
-
 /*******************************************************
  *					Classes 						*
  *******************************************************/
 class wp_custom_dashboard {
 
 	//	Variables 
+	protected $plugin_url;
+	protected $image_url;
+	
 	protected $parent_slug	=	NULL;
 	protected $page_title 	= 	"Dashboard";
 	protected $menu_title 	= 	"Dashboard";
@@ -32,10 +26,11 @@ class wp_custom_dashboard {
 	// Standard Constructor
 	public function __construct()
 	{
-	
+		$this->plugin_url = plugin_dir_url( __FILE__ );
+		$this->image_url = $this->plugin_url.'dashboard/img/';
+		
 		add_action('admin_menu', array( $this,'wp_set_dashboard') );
 		add_action('load-index.php', array( $this,'wp_redirect_dashboard') );
-	
 	}
 
 	// add the dashboard to the WordPress
@@ -67,8 +62,8 @@ class wp_custom_dashboard {
 	// Initiate the admin custom dashboard
 	public function custom_dashboard_admin_init()
 	{
-		wp_register_script( 'custom-dashboard-script', PLUGIN_URL.'dashboard/js/script.js' );
-		wp_register_style( 'custom-dashboard-style', PLUGIN_URL.'dashboard/css/style.css' );
+		wp_register_script( 'custom-dashboard-script', $this->PLUGIN_URL.'dashboard/js/script.js' );
+		wp_register_style( 'custom-dashboard-style', $this->PLUGIN_URL.'dashboard/css/style.css' );
 	}
 	
 	// Creates the dashboard. Look at dashboard.php to change the dashboard look

@@ -1,18 +1,8 @@
-<?php 
-/*******************************************************
- *					Constants					*
- *******************************************************/
-if( !defined('IMAGE_URL') ){
-	define( 'IMAGE_URL', plugin_dir_url( __FILE__ ).'img/' );
-}
-
-?>
-
 <div class="wrap about-wrap">
 	<h1>Welcome to My Custom Dashboard Page</h1>
 	
 	<div class="feature-section images-stagger-right" style="text-align:justify">
-		<img src="<?php echo IMAGE_URL.'wordpress-logo.png' ?>" style="height:200px"/>
+		<img src="<?php echo $this->image_url.'wordpress-logo.png' ?>" style="height:200px"/>
 	
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor eu orci semper porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris imperdiet rutrum semper. Duis ac gravida dui. Vestibulum quis dui orci. Donec in leo lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dolor elit, mollis rutrum pretium ac, facilisis in ipsum.</p>
 
